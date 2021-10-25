@@ -747,6 +747,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralDF94EFAB2817C9FA4C96A63F52A6908EB5841345
 IL2CPP_EXTERN_C String_t* _stringLiteralE249513646B3CA3B2119CA7AD27370C9E9012B74;
 IL2CPP_EXTERN_C String_t* _stringLiteralE30658D0ADE6E62208BFA543EF45EB5C784EE9B9;
 IL2CPP_EXTERN_C String_t* _stringLiteralE38896D7A7A4D523CB8DB8499882C1A4B6CD2517;
+IL2CPP_EXTERN_C String_t* _stringLiteralE3B3C6EBFEA166D20BF43554ADFEFAB3308E3F3E;
 IL2CPP_EXTERN_C String_t* _stringLiteralE446F5E5E3D5CD70111EE44D96D38C2402691299;
 IL2CPP_EXTERN_C String_t* _stringLiteralE4E07AE56B3A0074E42A9FFB34854865ED818489;
 IL2CPP_EXTERN_C String_t* _stringLiteralE573BD7F9C4A38697EE4A429FA0C236D6C7038C4;
@@ -770,7 +771,16 @@ IL2CPP_EXTERN_C String_t* _stringLiteralFDA1C52D0E58360F4E8FD608757CCD98D8772D4F
 IL2CPP_EXTERN_C String_t* _stringLiteralFFE3A1B73CD7FC81540FBBE737435B0A887629D5;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_3_Invoke_m0D09DC94117A9FFD3AA865B34B2572BBDD443AC2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AddReferenceImageJobState__ctor_mAFC8E35811BAF9292B00B7D06EF4C6895AFDD74C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_ConvertAsync_m7D88B9B493A448A03FBED33FE2C675805A2417F0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_ConvertAsync_mE9BFD28B9BC1C3A063FC0B84B014B3538A155E99_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_DisposeAsyncRequest_m06C972C865763DF2DE877124295F4A48B0574ABE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Api_DisposeImage_m6AEAAF9EF11D19294B441CF6DBB8FEDD58933989_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_GetAsyncRequestStatus_m920A8C2BA437BF3581A737DE8AF350094577300B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_NativeHandleValid_m25628942A0D2320EAB96887219972ED8257FC858_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_TryConvert_m2FB4CAC6639BE6EDDD65D74A3C296C9A72C1E6FD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_TryGetAsyncRequestData_mCEB60B8F55366677F05AAF1651F46C4B28AFAEA3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_TryGetConvertedDataSize_m50DDC92171F520516E21205E3817BEE0D51A9A51_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Api_TryGetPlane_m9EDAE9347615522A0C95F387DF4D274D655090A8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Configuration__ctor_m5A3F2286F33BA303B4C8A8E0E34ED6DA993A43BB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* DefaultConfigurationChooser_ChooseConfiguration_m4CA6F2A0B77732D4EACCA7D6FD3B1B1407ECBBD1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m79BB9557BF615D18A63059DCFFA3FD69F020132A_RuntimeMethod_var;
@@ -12719,6 +12729,8 @@ inline void Nullable_1__ctor_m9D7EBA0DE2F89A891507EC35157C70FC4DC81184 (Nullable
 }
 // System.Nullable`1<System.Int32> UnityEngine.XR.ARSubsystems.XRCameraConfiguration::get_framerate()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t864FD0051A05D37F91C857AB496BFCB3FE756103  XRCameraConfiguration_get_framerate_m3DCC7B7F2FEAFDFB5ED0A580153FBAAA22B60B96 (XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A * __this, const RuntimeMethod* method);
+// System.IntPtr UnityEngine.XR.ARSubsystems.XRCameraConfiguration::get_nativeConfigurationHandle()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t XRCameraConfiguration_get_nativeConfigurationHandle_m6A895097020EA19B6BB2E1BAB768CC911D8C3B98_inline (XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A * __this, const RuntimeMethod* method);
 // System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
 inline bool Nullable_1_get_HasValue_m7455E879CFAAE682AE3786D4D2B1F65C8AA23921_inline (Nullable_1_t864FD0051A05D37F91C857AB496BFCB3FE756103 * __this, const RuntimeMethod* method)
 {
@@ -19401,6 +19413,23 @@ IL2CPP_EXTERN_C  Nullable_1_t864FD0051A05D37F91C857AB496BFCB3FE756103  XRCameraC
 	_returnValue = XRCameraConfiguration_get_framerate_m3DCC7B7F2FEAFDFB5ED0A580153FBAAA22B60B96(_thisAdjusted, method);
 	return _returnValue;
 }
+// System.IntPtr UnityEngine.XR.ARSubsystems.XRCameraConfiguration::get_nativeConfigurationHandle()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t XRCameraConfiguration_get_nativeConfigurationHandle_m6A895097020EA19B6BB2E1BAB768CC911D8C3B98 (XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A * __this, const RuntimeMethod* method)
+{
+	{
+		// public IntPtr nativeConfigurationHandle => m_NativeConfigurationHandle;
+		intptr_t L_0 = __this->get_m_NativeConfigurationHandle_2();
+		return (intptr_t)L_0;
+	}
+}
+IL2CPP_EXTERN_C  intptr_t XRCameraConfiguration_get_nativeConfigurationHandle_m6A895097020EA19B6BB2E1BAB768CC911D8C3B98_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A * _thisAdjusted = reinterpret_cast<XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A *>(__this + _offset);
+	intptr_t _returnValue;
+	_returnValue = XRCameraConfiguration_get_nativeConfigurationHandle_m6A895097020EA19B6BB2E1BAB768CC911D8C3B98_inline(_thisAdjusted, method);
+	return _returnValue;
+}
 // System.String UnityEngine.XR.ARSubsystems.XRCameraConfiguration::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XRCameraConfiguration_ToString_m570541033A53E9657C809B420CEFDF63D944070B (XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A * __this, const RuntimeMethod* method)
 {
@@ -23439,7 +23468,7 @@ IL_0011:
 		Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * L_2 = __this->get_m_Api_1();
 		int32_t L_3 = __this->get_m_NativeHandle_0();
 		NullCheck(L_2);
-		VirtActionInvoker1< int32_t >::Invoke(4 /* System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api::DisposeImage(System.Int32) */, L_2, L_3);
+		VirtActionInvoker1< int32_t >::Invoke(11 /* System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api::DisposeImage(System.Int32) */, L_2, L_3);
 		// m_NativeHandle = 0;
 		__this->set_m_NativeHandle_0(0);
 		// m_Api = null;
@@ -33133,7 +33162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Promise_1_tB8B428F557CD6742430DB416C0B99C79CA
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_0);
 		Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167 * L_1;
-		L_1 = VirtFuncInvoker0< Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167 * >::Invoke(18 /* UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetAvailabilityAsync() */, L_0);
+		L_1 = VirtFuncInvoker0< Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167 * >::Invoke(19 /* UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetAvailabilityAsync() */, L_0);
 		return L_1;
 	}
 }
@@ -33173,7 +33202,7 @@ IL_0018:
 		L_3 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_3);
 		Promise_1_tB8B3F3631C923F82F653F3D73D6B3082CF7CDD88 * L_4;
-		L_4 = VirtFuncInvoker0< Promise_1_tB8B3F3631C923F82F653F3D73D6B3082CF7CDD88 * >::Invoke(19 /* UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::InstallAsync() */, L_3);
+		L_4 = VirtFuncInvoker0< Promise_1_tB8B3F3631C923F82F653F3D73D6B3082CF7CDD88 * >::Invoke(20 /* UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::InstallAsync() */, L_3);
 		return L_4;
 	}
 }
@@ -33498,7 +33527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSessionSubsystem_get_trackingState_
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtFuncInvoker0< int32_t >::Invoke(20 /* UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_trackingState() */, L_0);
+		L_1 = VirtFuncInvoker0< int32_t >::Invoke(21 /* UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_trackingState() */, L_0);
 		return L_1;
 	}
 }
@@ -33580,7 +33609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSessionSubsystem_get_notTrackingRea
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtFuncInvoker0< int32_t >::Invoke(21 /* UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_notTrackingReason() */, L_0);
+		L_1 = VirtFuncInvoker0< int32_t >::Invoke(22 /* UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_notTrackingReason() */, L_0);
 		return L_1;
 	}
 }
@@ -33599,7 +33628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSessionSubsystem_get_matchFrameRateEna
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_0);
 		bool L_1;
-		L_1 = VirtFuncInvoker0< bool >::Invoke(22 /* System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateEnabled() */, L_0);
+		L_1 = VirtFuncInvoker0< bool >::Invoke(23 /* System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateEnabled() */, L_0);
 		return L_1;
 	}
 }
@@ -33618,7 +33647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSessionSubsystem_get_matchFrameRateReq
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_0);
 		bool L_1;
-		L_1 = VirtFuncInvoker0< bool >::Invoke(23 /* System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateRequested() */, L_0);
+		L_1 = VirtFuncInvoker0< bool >::Invoke(24 /* System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateRequested() */, L_0);
 		return L_1;
 	}
 }
@@ -33637,7 +33666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSessionSubsystem_set_matchFrameRateReq
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		bool L_1 = ___value0;
 		NullCheck(L_0);
-		VirtActionInvoker1< bool >::Invoke(24 /* System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::set_matchFrameRateRequested(System.Boolean) */, L_0, L_1);
+		VirtActionInvoker1< bool >::Invoke(25 /* System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::set_matchFrameRateRequested(System.Boolean) */, L_0, L_1);
 		return;
 	}
 }
@@ -33656,7 +33685,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSessionSubsystem_get_frameRate_mE59
 		L_0 = SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m6804A0C76FB5F7C9925F2153F33A7E44BBD95F0E_RuntimeMethod_var);
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtFuncInvoker0< int32_t >::Invoke(25 /* System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_frameRate() */, L_0);
+		L_1 = VirtFuncInvoker0< int32_t >::Invoke(26 /* System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_frameRate() */, L_0);
 		return L_1;
 	}
 }
@@ -36036,6 +36065,76 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Provider__ctor_mA61CB0610059584FC8190F2C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Boolean UnityEngine.XR.ARSubsystems.XRCpuImage/Api::TryGetPlane(System.Int32,System.Int32,UnityEngine.XR.ARSubsystems.XRCpuImage/Plane/Cinfo&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Api_TryGetPlane_m9EDAE9347615522A0C95F387DF4D274D655090A8 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, int32_t ___planeIndex1, Cinfo_t11C577CFE4A1D91F887A6423F6D1350DA45CA5FC * ___planeCinfo2, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_TryGetPlane_m9EDAE9347615522A0C95F387DF4D274D655090A8_RuntimeMethod_var)));
+	}
+}
+// System.Boolean UnityEngine.XR.ARSubsystems.XRCpuImage/Api::TryGetConvertedDataSize(System.Int32,UnityEngine.Vector2Int,UnityEngine.TextureFormat,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Api_TryGetConvertedDataSize_m50DDC92171F520516E21205E3817BEE0D51A9A51 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  ___dimensions1, int32_t ___format2, int32_t* ___size3, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("Camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE3B3C6EBFEA166D20BF43554ADFEFAB3308E3F3E)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_TryGetConvertedDataSize_m50DDC92171F520516E21205E3817BEE0D51A9A51_RuntimeMethod_var)));
+	}
+}
+// System.Boolean UnityEngine.XR.ARSubsystems.XRCpuImage/Api::TryConvert(System.Int32,UnityEngine.XR.ARSubsystems.XRCpuImage/ConversionParams,System.IntPtr,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Api_TryConvert_m2FB4CAC6639BE6EDDD65D74A3C296C9A72C1E6FD (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A  ___conversionParams1, intptr_t ___destinationBuffer2, int32_t ___bufferLength3, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_TryConvert_m2FB4CAC6639BE6EDDD65D74A3C296C9A72C1E6FD_RuntimeMethod_var)));
+	}
+}
+// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage/Api::ConvertAsync(System.Int32,UnityEngine.XR.ARSubsystems.XRCpuImage/ConversionParams)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Api_ConvertAsync_m7D88B9B493A448A03FBED33FE2C675805A2417F0 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A  ___conversionParams1, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_ConvertAsync_m7D88B9B493A448A03FBED33FE2C675805A2417F0_RuntimeMethod_var)));
+	}
+}
+// System.Boolean UnityEngine.XR.ARSubsystems.XRCpuImage/Api::NativeHandleValid(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Api_NativeHandleValid_m25628942A0D2320EAB96887219972ED8257FC858 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_NativeHandleValid_m25628942A0D2320EAB96887219972ED8257FC858_RuntimeMethod_var)));
+	}
+}
+// System.Boolean UnityEngine.XR.ARSubsystems.XRCpuImage/Api::TryGetAsyncRequestData(System.Int32,System.IntPtr&,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Api_TryGetAsyncRequestData_mCEB60B8F55366677F05AAF1651F46C4B28AFAEA3 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___requestId0, intptr_t* ___dataPtr1, int32_t* ___dataLength2, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_TryGetAsyncRequestData_mCEB60B8F55366677F05AAF1651F46C4B28AFAEA3_RuntimeMethod_var)));
+	}
+}
+// System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api::ConvertAsync(System.Int32,UnityEngine.XR.ARSubsystems.XRCpuImage/ConversionParams,UnityEngine.XR.ARSubsystems.XRCpuImage/Api/OnImageRequestCompleteDelegate,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Api_ConvertAsync_mE9BFD28B9BC1C3A063FC0B84B014B3538A155E99 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A  ___conversionParams1, OnImageRequestCompleteDelegate_t118FB01E93241BFD5BCA5BEF2A6FD082ACAAB4DD * ___callback2, intptr_t ___context3, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_ConvertAsync_mE9BFD28B9BC1C3A063FC0B84B014B3538A155E99_RuntimeMethod_var)));
+	}
+}
 // System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api::DisposeImage(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Api_DisposeImage_m6AEAAF9EF11D19294B441CF6DBB8FEDD58933989 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___nativeHandle0, const RuntimeMethod* method)
 {
@@ -36044,6 +36143,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Api_DisposeImage_m6AEAAF9EF11D19294B441C
 		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_DisposeImage_m6AEAAF9EF11D19294B441CF6DBB8FEDD58933989_RuntimeMethod_var)));
+	}
+}
+// System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api::DisposeAsyncRequest(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Api_DisposeAsyncRequest_m06C972C865763DF2DE877124295F4A48B0574ABE (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___requestId0, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_DisposeAsyncRequest_m06C972C865763DF2DE877124295F4A48B0574ABE_RuntimeMethod_var)));
+	}
+}
+// UnityEngine.XR.ARSubsystems.XRCpuImage/AsyncConversionStatus UnityEngine.XR.ARSubsystems.XRCpuImage/Api::GetAsyncRequestStatus(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Api_GetAsyncRequestStatus_m920A8C2BA437BF3581A737DE8AF350094577300B (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, int32_t ___requestId0, const RuntimeMethod* method)
+{
+	{
+		// throw new NotSupportedException("camera image conversion is not supported by this implementation");
+		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m40BC57BDA6E0E119B73700CC809A14B57DC65A90(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral50462E987F01EE38DE56F70AE720A4C4512F3F59)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Api_GetAsyncRequestStatus_m920A8C2BA437BF3581A737DE8AF350094577300B_RuntimeMethod_var)));
+	}
+}
+// System.Boolean UnityEngine.XR.ARSubsystems.XRCpuImage/Api::FormatSupported(UnityEngine.XR.ARSubsystems.XRCpuImage,UnityEngine.TextureFormat)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Api_FormatSupported_mD53B1C7B2A9D9D49ADDCE94794198C5A0FB64828 (Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * __this, XRCpuImage_tA48C0687D95D3D63D1101E4E08EFCF0ABB2431CE  ___image0, int32_t ___format1, const RuntimeMethod* method)
+{
+	{
+		// public virtual bool FormatSupported(XRCpuImage image, TextureFormat format) => false;
+		return (bool)0;
 	}
 }
 // System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api::.ctor()
@@ -40017,6 +40144,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Provider_OnApplicationResume_m5986673397
 		return;
 	}
 }
+// System.IntPtr UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_nativePtr()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Provider_get_nativePtr_m36BB948CA26F060AE9F9B5E77191B48605C5770B (Provider_t4C3675997BB8AF3A6A32C3EC3C93C10E4D3E8D1A * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// public virtual IntPtr nativePtr => IntPtr.Zero;
+		return (intptr_t)(0);
+	}
+}
 // UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetAvailabilityAsync()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167 * Provider_GetAvailabilityAsync_m0C73C4907A03BA2F018EA2C0CE66C9C17423C6DD (Provider_t4C3675997BB8AF3A6A32C3EC3C93C10E4D3E8D1A * __this, const RuntimeMethod* method)
 {
@@ -41396,6 +41537,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRAnchorSubsystemDescriptor_
 		bool L_0 = ___value0;
 		__this->set_U3CsupportsTrackableAttachmentsU3Ek__BackingField_3(L_0);
 		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t XRCameraConfiguration_get_nativeConfigurationHandle_m6A895097020EA19B6BB2E1BAB768CC911D8C3B98_inline (XRCameraConfiguration_t2393055E5547307393E9C73AB13B95E0785A4F7A * __this, const RuntimeMethod* method)
+{
+	{
+		// public IntPtr nativeConfigurationHandle => m_NativeConfigurationHandle;
+		intptr_t L_0 = __this->get_m_NativeConfigurationHandle_2();
+		return (intptr_t)L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2Int_op_Equality_m00B7F2874DE276B3F10044CED9F633AFE80D366D_inline (Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  ___lhs0, Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9  ___rhs1, const RuntimeMethod* method)

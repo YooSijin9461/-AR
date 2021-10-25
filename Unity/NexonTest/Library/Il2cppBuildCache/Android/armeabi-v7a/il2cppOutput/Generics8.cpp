@@ -5429,6 +5429,38 @@ public:
 };
 
 
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob>
+struct ParallelForJobStruct_1_t89510EE1FE39029A6ED93CFCDFC89905E8EF19CA 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t ParallelForJobStruct_1_tE0DB508AC2ED8A94617C06656AC1E9A9E3C667C5__padding[1];
+	};
+
+public:
+};
+
+struct ParallelForJobStruct_1_t89510EE1FE39029A6ED93CFCDFC89905E8EF19CA_StaticFields
+{
+public:
+	// System.IntPtr Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1::jobReflectionData
+	intptr_t ___jobReflectionData_0;
+
+public:
+	inline static int32_t get_offset_of_jobReflectionData_0() { return static_cast<int32_t>(offsetof(ParallelForJobStruct_1_t89510EE1FE39029A6ED93CFCDFC89905E8EF19CA_StaticFields, ___jobReflectionData_0)); }
+	inline intptr_t get_jobReflectionData_0() const { return ___jobReflectionData_0; }
+	inline intptr_t* get_address_of_jobReflectionData_0() { return &___jobReflectionData_0; }
+	inline void set_jobReflectionData_0(intptr_t value)
+	{
+		___jobReflectionData_0 = value;
+	}
+};
+
+
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastJob>
 struct ParallelForJobStruct_1_t3389ACC12BED9CCA5911DBCEBAE046C860CD3F6D 
 {
@@ -6843,6 +6875,44 @@ public:
 	}
 
 	inline static int32_t get_offset_of_m_AllocatorLabel_2() { return static_cast<int32_t>(offsetof(NativeArray_1_t3702A7E7C386B5BA9D224D756BE66A26A0CA0982, ___m_AllocatorLabel_2)); }
+	inline int32_t get_m_AllocatorLabel_2() const { return ___m_AllocatorLabel_2; }
+	inline int32_t* get_address_of_m_AllocatorLabel_2() { return &___m_AllocatorLabel_2; }
+	inline void set_m_AllocatorLabel_2(int32_t value)
+	{
+		___m_AllocatorLabel_2 = value;
+	}
+};
+
+
+// Unity.Collections.NativeArray`1<UnityEngine.XR.ARCore.ARCoreFaceRegionData>
+struct NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757 
+{
+public:
+	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
+	void* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeArray`1::m_Length
+	int32_t ___m_Length_1;
+	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
+	int32_t ___m_AllocatorLabel_2;
+
+public:
+	inline static int32_t get_offset_of_m_Buffer_0() { return static_cast<int32_t>(offsetof(NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757, ___m_Buffer_0)); }
+	inline void* get_m_Buffer_0() const { return ___m_Buffer_0; }
+	inline void** get_address_of_m_Buffer_0() { return &___m_Buffer_0; }
+	inline void set_m_Buffer_0(void* value)
+	{
+		___m_Buffer_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Length_1() { return static_cast<int32_t>(offsetof(NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757, ___m_Length_1)); }
+	inline int32_t get_m_Length_1() const { return ___m_Length_1; }
+	inline int32_t* get_address_of_m_Length_1() { return &___m_Length_1; }
+	inline void set_m_Length_1(int32_t value)
+	{
+		___m_Length_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_AllocatorLabel_2() { return static_cast<int32_t>(offsetof(NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757, ___m_AllocatorLabel_2)); }
 	inline int32_t get_m_AllocatorLabel_2() const { return ___m_AllocatorLabel_2; }
 	inline int32_t* get_address_of_m_AllocatorLabel_2() { return &___m_AllocatorLabel_2; }
 	inline void set_m_AllocatorLabel_2(int32_t value)
@@ -9577,6 +9647,34 @@ public:
 };
 
 
+// UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob
+struct TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250 
+{
+public:
+	// Unity.Collections.NativeArray`1<UnityEngine.XR.ARCore.ARCoreFaceSubsystem/FaceRegionWithARCorePose> UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob::regionsIn
+	NativeArray_1_tBBE6B4D8E8C3C621A3FA673D8BF8BCF31380312F  ___regionsIn_0;
+	// Unity.Collections.NativeArray`1<UnityEngine.XR.ARCore.ARCoreFaceRegionData> UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob::regionsOut
+	NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757  ___regionsOut_1;
+
+public:
+	inline static int32_t get_offset_of_regionsIn_0() { return static_cast<int32_t>(offsetof(TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250, ___regionsIn_0)); }
+	inline NativeArray_1_tBBE6B4D8E8C3C621A3FA673D8BF8BCF31380312F  get_regionsIn_0() const { return ___regionsIn_0; }
+	inline NativeArray_1_tBBE6B4D8E8C3C621A3FA673D8BF8BCF31380312F * get_address_of_regionsIn_0() { return &___regionsIn_0; }
+	inline void set_regionsIn_0(NativeArray_1_tBBE6B4D8E8C3C621A3FA673D8BF8BCF31380312F  value)
+	{
+		___regionsIn_0 = value;
+	}
+
+	inline static int32_t get_offset_of_regionsOut_1() { return static_cast<int32_t>(offsetof(TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250, ___regionsOut_1)); }
+	inline NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757  get_regionsOut_1() const { return ___regionsOut_1; }
+	inline NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757 * get_address_of_regionsOut_1() { return &___regionsOut_1; }
+	inline void set_regionsOut_1(NativeArray_1_t7C16D8B5807471D80F6ABE7E7A5DFEB24018C757  value)
+	{
+		___regionsOut_1 = value;
+	}
+};
+
+
 // UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastJob
 struct PointCloudRaycastJob_t097E5071568968353900E36DD9110FEC04135270 
 {
@@ -9839,6 +9937,15 @@ public:
 
 // Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<UnityEngine.XR.ARCore.FlipVerticalJob>
 struct ExecuteJobFunction_tE96968AFC251C809478CD9052DBCFCCA73A179C5  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+
+// Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1/ExecuteJobFunction<UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob>
+struct ExecuteJobFunction_t0ADFE468257AD015D7B6BF25FDDE4992AC3A95D6  : public MulticastDelegate_t
 {
 public:
 
@@ -13590,6 +13697,8 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void ConvertRFloatToGrayscal
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void ConvertStridedToGrayscaleJob_Execute_mCE754867584D199CA2327899A37E813DBC268D2D (ConvertStridedToGrayscaleJob_t56655DB995EF94ED1265206867B4A83D07B7CE32 * IL2CPP_PARAMETER_RESTRICT __this, int32_t ___row0, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.ARCore.FlipVerticalJob::Execute(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void FlipVerticalJob_Execute_mFBBABB425866F3B77CD26C2A649D1EB0068688AC (FlipVerticalJob_t3C6B0734411D731FBF7AC9A29DA2B7338584A540 * IL2CPP_PARAMETER_RESTRICT __this, int32_t ___row0, const RuntimeMethod* method);
+// System.Void UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob::Execute(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void TransformPoseJob_Execute_m5A02E38E46BE35E51EB0EC4BB7E67D49D85B240B (TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250 * IL2CPP_PARAMETER_RESTRICT __this, int32_t ___index0, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastJob::Execute(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void PointCloudRaycastJob_Execute_mB6A41993F9C4A8539D0B50BF36CAD134941D542C (PointCloudRaycastJob_t097E5071568968353900E36DD9110FEC04135270 * IL2CPP_PARAMETER_RESTRICT __this, int32_t ___i0, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.ARCore.ARCoreFaceSubsystem/ARCoreProvider/TransformIndicesJob::Execute(System.Int32)
@@ -38535,6 +38644,137 @@ IL_0020:
 		FlipVerticalJob_t3C6B0734411D731FBF7AC9A29DA2B7338584A540 * L_6 = ___jobData0;
 		int32_t L_7 = V_4;
 		FlipVerticalJob_Execute_mFBBABB425866F3B77CD26C2A649D1EB0068688AC((FlipVerticalJob_t3C6B0734411D731FBF7AC9A29DA2B7338584A540 *)(FlipVerticalJob_t3C6B0734411D731FBF7AC9A29DA2B7338584A540 *)L_6, (int32_t)L_7, /*hidden argument*/NULL);
+		int32_t L_8 = V_4;
+		V_4 = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_8, (int32_t)1));
+	}
+
+IL_0035:
+	{
+		int32_t L_9 = V_4;
+		int32_t L_10 = V_2;
+		V_5 = (bool)((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
+		bool L_11 = V_5;
+		if (L_11)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+	}
+
+IL_0041:
+	{
+		V_6 = (bool)1;
+		goto IL_0003;
+	}
+
+IL_0046:
+	{
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.IntPtr Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob>::Initialize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t ParallelForJobStruct_1_Initialize_m78E60A3C30A878FCB54898A3FB23A089B6D1762A_gshared (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	intptr_t V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		intptr_t L_0 = ((ParallelForJobStruct_1_t89510EE1FE39029A6ED93CFCDFC89905E8EF19CA_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->get_jobReflectionData_0();
+		bool L_1;
+		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
+		V_0 = (bool)L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_3 = { reinterpret_cast<intptr_t> (IL2CPP_RGCTX_TYPE(InitializedTypeInfo(method->klass)->rgctx_data, 1)) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_4;
+		L_4 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E((RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 )L_3, /*hidden argument*/NULL);
+		ExecuteJobFunction_t0ADFE468257AD015D7B6BF25FDDE4992AC3A95D6 * L_5 = (ExecuteJobFunction_t0ADFE468257AD015D7B6BF25FDDE4992AC3A95D6 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 3));
+		((  void (*) (ExecuteJobFunction_t0ADFE468257AD015D7B6BF25FDDE4992AC3A95D6 *, RuntimeObject *, intptr_t, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 4)->methodPointer)(L_5, (RuntimeObject *)NULL, (intptr_t)((intptr_t)IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 2)), /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 4));
+		intptr_t L_6;
+		L_6 = JobsUtility_CreateJobReflectionData_mD36CCBEE0714A6B0FA356AAA7FA342A65517A37C((Type_t *)L_4, (RuntimeObject *)L_5, (RuntimeObject *)NULL, (RuntimeObject *)NULL, /*hidden argument*/NULL);
+		((ParallelForJobStruct_1_t89510EE1FE39029A6ED93CFCDFC89905E8EF19CA_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->set_jobReflectionData_0((intptr_t)L_6);
+	}
+
+IL_0036:
+	{
+		intptr_t L_7 = ((ParallelForJobStruct_1_t89510EE1FE39029A6ED93CFCDFC89905E8EF19CA_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 0)))->get_jobReflectionData_0();
+		V_1 = (intptr_t)L_7;
+		goto IL_003e;
+	}
+
+IL_003e:
+	{
+		intptr_t L_8 = V_1;
+		return (intptr_t)L_8;
+	}
+}
+// System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<UnityEngine.XR.ARCore.ARCoreFaceSubsystem/TransformPoseJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParallelForJobStruct_1_Execute_m75CE30CDC489BFC32A972019B6A3EC5555751E3B_gshared (TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250 * ___jobData0, intptr_t ___additionalPtr1, intptr_t ___bufferRangePatchData2, JobRanges_tC73669D80CD008ABB5B2F5D58B28FF369DB3855E * ___ranges3, int32_t ___jobIndex4, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	bool V_3 = false;
+	int32_t V_4 = 0;
+	bool V_5 = false;
+	bool V_6 = false;
+	{
+		goto IL_0041;
+	}
+
+IL_0003:
+	{
+		JobRanges_tC73669D80CD008ABB5B2F5D58B28FF369DB3855E * L_0 = ___ranges3;
+		int32_t L_1 = ___jobIndex4;
+		bool L_2;
+		L_2 = JobsUtility_GetWorkStealingRange_m8E2276200A11FDF636F1C6092E786ACD0396435C((JobRanges_tC73669D80CD008ABB5B2F5D58B28FF369DB3855E *)(JobRanges_tC73669D80CD008ABB5B2F5D58B28FF369DB3855E *)L_0, (int32_t)L_1, (int32_t*)(int32_t*)(&V_0), (int32_t*)(int32_t*)(&V_1), /*hidden argument*/NULL);
+		V_3 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_3;
+		if (!L_3)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		goto IL_0046;
+	}
+
+IL_0019:
+	{
+		int32_t L_4 = V_1;
+		V_2 = (int32_t)L_4;
+		int32_t L_5 = V_0;
+		V_4 = (int32_t)L_5;
+		goto IL_0035;
+	}
+
+IL_0020:
+	{
+		TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250 * L_6 = ___jobData0;
+		int32_t L_7 = V_4;
+		TransformPoseJob_Execute_m5A02E38E46BE35E51EB0EC4BB7E67D49D85B240B((TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250 *)(TransformPoseJob_t677C9167D8394018632D739ADE07E97700BAA250 *)L_6, (int32_t)L_7, /*hidden argument*/NULL);
 		int32_t L_8 = V_4;
 		V_4 = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_8, (int32_t)1));
 	}
