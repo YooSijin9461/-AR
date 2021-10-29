@@ -47,8 +47,8 @@ public class Camera : MonoBehaviour
         backCam.Play();
         background.texture = backCam;
 
-        // isCamFrontFacing = backCam.is
-    }
+        camAvailable = true;
+  }
 
 
     void Update()
@@ -61,11 +61,11 @@ public class Camera : MonoBehaviour
         fit.aspectRatio = ratio;
 
         // 텍스처 이미지가 수직으로 뒤집힌 경우
-        // float scaleY = frontCam.videoVerticallyMirrored ? -1f : 1f;
-        // background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
+        float scaleY = backCam.videoVerticallyMirrored ? -1f : 1f;
+        background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
         // 회전 코드인 것 같음.
-        // int orient = -backCam.videoRotationAngle;
-        // background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+        int orient = -backCam.videoRotationAngle;
+        background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     } 
 }
