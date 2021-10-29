@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AingScene.unity
     guid: 6c9c56ffbf823444894809175246997e
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 4d71020268628c045857a30056067956
+  - enabled: 1
+    path: Assets/Scenes/SearchFilter.unity
+    guid: 8ba504cb328c01c4aa47d568dd2f421b
+  - enabled: 1
+    path: Assets/Scenes/ShareScene.unity
+    guid: 66db5c318447d734e90e38c823257850
+  - enabled: 1
+    path: Assets/Scenes/CheckScene.unity
+    guid: 62c7c18ee2c35ba4c82ca35f02deb55f
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 371e94c7e1d1c3f439efd4d56c57b71e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cc258f2f93266c5418411ac072d582dc, type: 2}
