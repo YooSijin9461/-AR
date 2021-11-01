@@ -8,9 +8,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AingScene.unity
     guid: 6c9c56ffbf823444894809175246997e
+  - enabled: 0
+    path: Assets/Scenes/PinkBeanScene.unity
+    guid: 59930bd0de3d4a346ae3f5c260e9b0a5
+  - enabled: 0
+    path: Assets/Scenes/ButterflyScene.unity
+    guid: 28b9de17b7a2a464baccdd1c07f1cc18
+  - enabled: 0
+    path: Assets/Scenes/WaterBalloonScene.unity
+    guid: b273ae58ca065524689daeaa47a94def
+  - enabled: 0
+    path: Assets/Scenes/CatHelmetScene.unity
+    guid: cc619f8f82a561546b4faa137a5a3729
+  - enabled: 1
+    path: Assets/Scenes/CodyScene.unity
+    guid: ab6e27e7e69703c4fb57f7f7ddf6761e
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 371e94c7e1d1c3f439efd4d56c57b71e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cc258f2f93266c5418411ac072d582dc, type: 2}
