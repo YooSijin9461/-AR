@@ -26,9 +26,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CatHelmetScene.unity
     guid: cc619f8f82a561546b4faa137a5a3729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CodyScene.unity
     guid: ab6e27e7e69703c4fb57f7f7ddf6761e
+  - enabled: 0
+    path: Assets/Scenes/OrangeMushroomScene.unity
+    guid: 7abf7ab270e584945a2a1e4cade6ebad
+  - enabled: 0
+    path: Assets/Scenes/FriedAingScene.unity
+    guid: b588e5d5afe1c7d4a9a63aea5ed798b1
+  - enabled: 0
+    path: Assets/Scenes/RabbitSampleScene.unity
+    guid: e03eff4d0f67cef4ba332380501ab5a0
+  - enabled: 0
+    path: Assets/Scenes/HatSampleScene.unity
+    guid: e53219dd0b82245458b21c96e86859cd
+  - enabled: 1
+    path: Assets/Scenes/GlassessScene.unity
+    guid: c61a7bf57828b874a8fe10f6e7ad80de
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 371e94c7e1d1c3f439efd4d56c57b71e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cc258f2f93266c5418411ac072d582dc, type: 2}
