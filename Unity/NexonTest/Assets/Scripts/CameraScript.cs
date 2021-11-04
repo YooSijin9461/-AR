@@ -3,19 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
+using UnityEngine.Windows;
 
 public class CameraScript : MonoBehaviour
 {
+    public string gallery;
     static WebCamTexture cam;
     public RawImage cameraViewImage; //카메라가 보여질 화면
-                                     // Start is called before the first frame update
-  public int count = 0;
-  void Update()
-    {
-        Debug.Log(count);
-    count++;
-    if(count == 500){
-          
+
+    void Start()
+    {   
+        Debug.Log("Permission check");
+        if(false == UnityEngine.Android.Permission.HasUserAuthorizedPermission(UnityEngine.Android.Permission.ExternalStorageWrite))
+        {
+            return;
+        }
+        string galleryPath = string.Empty;
+        string persistentDataPath = Application.persistentDataPath;
+        Debug.Log(persistentDataPath);
+        galleryPath = persistentDataPath.Substring(0, persistentDataPath.IndexOf("Android"))+"/DCIM/NZAR";
+        Directory.CreateDirectory("NZAR");
+        Debug.Log("Gallery Path: "+galleryPath);
+        gallery = galleryPath;
+
+        Invoke("CameraOn", 1f);
+    }
+    public void CameraOn(){
         Debug.Log("ON");
         //카메라 권한
         if(!Permission.HasUserAuthorizedPermission(Permission.Camera))
@@ -48,24 +61,12 @@ public class CameraScript : MonoBehaviour
             // camTexture = new WebCamTexture(devices[selectedCameraIndex].name);
             cam.requestedFPS = 30; //안버벅이면 60, 버벅이면 30
             cameraViewImage.texture = cam;
-
-
-            // cameraViewImage.material.mainTexture = camTexture;
             cam.Play();
         }  
-        }
     }
-    // For photo varibles
-    // void OnGUI()
-    // {
-    //     // 버튼 UI를 코드상으로 생성한 후 버튼 이벤트(TakeSnapshot()) 지정
-    //     if (GUI.Button(new Rect(10, 70, 300, 300), "TakeAndSave"))
-    //         TakeSnapshot();
-
-    // }
 
     // 지정한 경로( _savepath)에 PNG 파일형식으로 저장합니다.
-    private string _SavePath = @"C:\"; //경로 바꾸세요!
+    // private string _SavePath = @"C:\"; //경로 바꾸세요!
     int _CaptureCounter = 0; // 파일명을 위한
  
     public void TakeSnapshot()
@@ -73,9 +74,9 @@ public class CameraScript : MonoBehaviour
         Texture2D snap = new Texture2D(cam.width, cam.height);
         snap.SetPixels(cam.GetPixels());
         snap.Apply();
-        cameraViewImage.texture = snap;
+        cameraViewImage.texture = snap; //사진찍는 법(찍고 나서 아래 UI를 바꾸면 됨)
 
-        System.IO.File.WriteAllBytes(_SavePath + _CaptureCounter.ToString() + ".png", snap.EncodeToPNG());
+        System.IO.File.WriteAllBytes(gallery + _CaptureCounter.ToString() + ".png", snap.EncodeToPNG());
         ++_CaptureCounter;
     }
 }
