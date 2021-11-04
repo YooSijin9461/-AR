@@ -8,7 +8,7 @@ public class ARFilterManager : MonoBehaviour
 {
   
     public GameObject parentUI; // 부모 객체
-    public Button filterItem; //추가할 요소
+    public GameObject filterItem; //추가할 요소
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +31,16 @@ public class ARFilterManager : MonoBehaviour
 
     // 파일 길이 만큼 AssetItem 생성
     foreach (FileInfo f in info){
-      Button child = Instantiate(filterItem);
+      GameObject child = Instantiate(filterItem);
+      
+
       child.transform.SetParent(parentUI.transform);
+      // 버튼 내 text 변경
+      child.GetComponentInChildren<Text>().text = f.Name.ToString().Substring(0, f.Name.ToString().LastIndexOf("."));
+      // GameObject textObject = child.transform.FindChild("Text").gameObject;
+      // Text text = textObject.transform.GetChild(0);
+      // textObject.getComponent<Text>().text = "hahah";
+
     }
 
     // GameObject filterItemPrefab;
