@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-public class GlassessSwitch : MonoBehaviour
+public class HatsSwitch : MonoBehaviour
 {
     ARFaceManager arFaceManager;
 
@@ -32,8 +32,8 @@ public class GlassessSwitch : MonoBehaviour
     void Update()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-            {
+        {
             SwitchFaces();
-            }
+        }
     }
 }
