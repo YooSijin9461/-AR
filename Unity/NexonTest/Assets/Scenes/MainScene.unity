@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 225348379}
   - component: {fileID: 225348382}
   - component: {fileID: 225348383}
-  - component: {fileID: 225348384}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -368,19 +367,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   total: 3
   countDown: {fileID: 1677697793}
---- !u!114 &225348384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225348378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2e4fce96a822c46bcf4618817ca6a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraViewImage: {fileID: 0}
 --- !u!1 &228806295
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,10 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1440, y: 3200}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -893,6 +879,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957280170}
   m_CullTransparentMesh: 1
+--- !u!1 &1085854183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085854185}
+  - component: {fileID: 1085854184}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1085854184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085854183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2e4fce96a822c46bcf4618817ca6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraViewImage: {fileID: 1926135233}
+  count: 0
+--- !u!4 &1085854185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085854183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 719.26013, y: 1395.0483, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372732456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1079,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 225348384}
+      - m_Target: {fileID: 1085854184}
         m_TargetAssemblyTypeName: CameraScript, Assembly-CSharp
         m_MethodName: TakeSnapshot
         m_Mode: 1
@@ -1715,7 +1746,6 @@ GameObject:
   - component: {fileID: 1926135232}
   - component: {fileID: 1926135234}
   - component: {fileID: 1926135233}
-  - component: {fileID: 1926135235}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -1777,19 +1807,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926135231}
   m_CullTransparentMesh: 1
---- !u!114 &1926135235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926135231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2e4fce96a822c46bcf4618817ca6a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraViewImage: {fileID: 0}
 --- !u!1 &1972997573
 GameObject:
   m_ObjectHideFlags: 0

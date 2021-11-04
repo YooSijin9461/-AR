@@ -8,9 +8,14 @@ public class CameraScript : MonoBehaviour
 {
     static WebCamTexture cam;
     public RawImage cameraViewImage; //카메라가 보여질 화면
-    // Start is called before the first frame update
-    void Start()
+                                     // Start is called before the first frame update
+  public int count = 0;
+  void Update()
     {
+        Debug.Log(count);
+    count++;
+    if(count == 500){
+          
         Debug.Log("ON");
         //카메라 권한
         if(!Permission.HasUserAuthorizedPermission(Permission.Camera))
@@ -31,11 +36,12 @@ public class CameraScript : MonoBehaviour
             Debug.Log("Find Camera!: "+devices[i].name);
             if(devices[i].isFrontFacing){
                 selectedCameraIndex = i;
-                // Debug.Log("Find Camera!: "+devices[selectedCameraIndex].name);
+                Debug.Log("Find FFF Camera!: "+devices[selectedCameraIndex].name);
                 cam = new WebCamTexture(devices[selectedCameraIndex].name);
                 // break;
             }
         }
+
 
         //카메라 켜기
         if(selectedCameraIndex >= 0){
@@ -46,6 +52,7 @@ public class CameraScript : MonoBehaviour
 
             // cameraViewImage.material.mainTexture = camTexture;
             cam.Play();
+        }  
         }
     }
     // For photo varibles
