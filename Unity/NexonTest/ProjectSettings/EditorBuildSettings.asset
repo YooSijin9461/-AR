@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 4d71020268628c045857a30056067956
   - enabled: 0
@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HatSampleScene.unity
     guid: e53219dd0b82245458b21c96e86859cd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GlassessScene.unity
     guid: c61a7bf57828b874a8fe10f6e7ad80de
   - enabled: 0
@@ -53,9 +53,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HatsScene.unity
     guid: 6c177f36fed39d24cb2d61bf3cb3fcc7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PetsScene.unity
     guid: 78e4b43923dda474b894aec75a5ed74b
+  - enabled: 0
+    path: Assets/Scenes/AstronautScene.unity
+    guid: 35d5286b418660041b49340a934b3a29
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 371e94c7e1d1c3f439efd4d56c57b71e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cc258f2f93266c5418411ac072d582dc, type: 2}
