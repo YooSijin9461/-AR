@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 50e60879d60d2a048b325914714fe8bd
+timeCreated: 1524039076
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: cat
+    100004: //RootNode
+    100006: chest
+    100008: head
+    100010: head_end
+    100012: hips
+    100014: Left foot
+    100016: Left foot_end
+    100018: Left hnad
+    100020: Left hnad_end
+    100022: Left lowerArm
+    100024: Left lowerLeg
+    100026: Left shoulder
+    100028: Left upperArm
+    100030: Left upperLeg
+    100032: neck
+    100034: Right foot
+    100036: Right foot_end
+    100038: Right Left hnad
+    100040: Right Left hnad_end
+    100042: Right lowerArm
+    100044: Right lowerLeg
+    100046: Right shoulder
+    100048: Right upperArm
+    100050: Right upperLeg
+    100052: Root
+    100054: spine
+    100056: tail00
+    100058: tail01
+    100060: tail02
+    100062: tail03
+    100064: tail04
+    100066: tail05
+    100068: tail05_end
+    400000: Armature
+    400002: cat
+    400004: //RootNode
+    400006: chest
+    400008: head
+    400010: head_end
+    400012: hips
+    400014: Left foot
+    400016: Left foot_end
+    400018: Left hnad
+    400020: Left hnad_end
+    400022: Left lowerArm
+    400024: Left lowerLeg
+    400026: Left shoulder
+    400028: Left upperArm
+    400030: Left upperLeg
+    400032: neck
+    400034: Right foot
+    400036: Right foot_end
+    400038: Right Left hnad
+    400040: Right Left hnad_end
+    400042: Right lowerArm
+    400044: Right lowerLeg
+    400046: Right shoulder
+    400048: Right upperArm
+    400050: Right upperLeg
+    400052: Root
+    400054: spine
+    400056: tail00
+    400058: tail01
+    400060: tail02
+    400062: tail03
+    400064: tail04
+    400066: tail05
+    400068: tail05_end
+    2100000: defaultMat.002
+    2100002: defaultMat.007
+    2100004: defaultMat.006
+    2100006: defaultMat.005
+    2100008: defaultMat.004
+    2100010: defaultMat.003
+    2100012: defaultMat.001
+    2100014: defaultMat
+    4300000: cat
+    7400000: Armature|jump
+    7400002: Armature|run
+    7400004: Armature|walk
+    9500000: //RootNode
+    13700000: cat
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat
+    second: {fileID: 2100000, guid: f34714e604d8c724bb1866033f6d82e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.001
+    second: {fileID: 2100000, guid: 7043ed3f42cf03042bc3b638e592656d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.002
+    second: {fileID: 2100000, guid: 2084cf5070b88e449a01f8c212007d6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.003
+    second: {fileID: 2100000, guid: 8ab79a6c0e449594e80e33d4355f5736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.004
+    second: {fileID: 2100000, guid: cd0d2480da59cbb48a4f459ac8582610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.005
+    second: {fileID: 2100000, guid: 67a87c87f0a32774cb4f468e7288e0d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.006
+    second: {fileID: 2100000, guid: 79411c196ad69a34ebfdd544b2c6962e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat.007
+    second: {fileID: 2100000, guid: 33a4fdff87bd1cd44a29ab11085f8616, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
