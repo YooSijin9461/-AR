@@ -7,7 +7,8 @@ using System.IO;
 public class ARPhotoManager : MonoBehaviour
 {
   public RawImage fullScreen; //unity상에서 rawImage를 꽂아줄 것
-
+  public Button successBtn; //성공 버튼
+  public Button failBtn; //실패 버튼
   private Texture2D reserveImage; //임시로 보여주고 저장할 사진
   private GameObject canvasAll; //UI 전체
   private GameObject backgroundScrollView;
@@ -25,10 +26,14 @@ public class ARPhotoManager : MonoBehaviour
     backButton = GameObject.Find("Back").gameObject;
     shareButton = GameObject.Find("Share").gameObject;
     saveButton = GameObject.Find("Save").gameObject;
+
+    successBtn.gameObject.SetActive(false);
+    failBtn.gameObject.SetActive(false);
     backButton.SetActive(false);
     shareButton.SetActive(false);
     saveButton.SetActive(false);
     fullScreen.gameObject.SetActive(false);
+    
     // //갤러리 권한
     // if(!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
     // {
@@ -95,14 +100,32 @@ public class ARPhotoManager : MonoBehaviour
     backgroundScrollMenu.SetActive(true);
     takeButton.SetActive(true);
   }
+  void DelaySuccess()
+  {
+     successBtn.gameObject.SetActive(false);
+  }
+  void DelayFail()
+  {
+     failBtn.gameObject.SetActive(false);
+  }
 
   public void saveImage()
   {
+    try
+    {
     //https://stackoverflow.com/questions/44756917/saving-screenshot-to-android-gallary-via-game/44757233
     StartCoroutine(CaptureScreenshotCoroutine(Screen.width, Screen.height));
-
     // 사진이 저장되었다면/실패했다면 그에 따른 안내 멘트
-
+    successBtn.gameObject.SetActive(true);
+    Invoke("DelaySuccess", 3f);
+    }
+    catch (System.Exception)
+    {
+        // 사진이 저장되었다면/실패했다면 그에 따른 안내 멘트
+        failBtn.gameObject.SetActive(true);
+        Invoke("DelayFail", 3f);
+        throw;
+    }
 
     //돌아가기는 필요 없을 듯
 
