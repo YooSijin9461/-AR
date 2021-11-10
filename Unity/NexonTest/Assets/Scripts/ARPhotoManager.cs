@@ -1,15 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Android;
 using System;
 using System.IO;
 
 public class ARPhotoManager : MonoBehaviour
 {
-  public new Camera camera; //unity상에서 AR 카메라를 꽂아줄 것
-  public RawImage cameraSize; //unity상에서 Panel 꽂기
+  public RawImage fullScreen; //unity상에서 rawImage를 꽂아줄 것
+
+  private Texture2D reserveImage; //임시로 보여주고 저장할 사진
+  private GameObject canvasAll; //UI 전체
   private GameObject backgroundScrollView;
   private GameObject backgroundScrollMenu;
   private GameObject takeButton;
@@ -18,6 +18,7 @@ public class ARPhotoManager : MonoBehaviour
   private GameObject saveButton;
 
   void Start() {
+    canvasAll = GameObject.Find("Canvas").gameObject;
     backgroundScrollView = GameObject.Find("ScrollView").gameObject;
     backgroundScrollMenu = GameObject.Find("BackgroundFolder").gameObject;
     takeButton = GameObject.Find("Take").gameObject;
@@ -27,6 +28,7 @@ public class ARPhotoManager : MonoBehaviour
     backButton.SetActive(false);
     shareButton.SetActive(false);
     saveButton.SetActive(false);
+    fullScreen.gameObject.SetActive(false);
     // //갤러리 권한
     // if(!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
     // {
@@ -42,66 +44,139 @@ public class ARPhotoManager : MonoBehaviour
   int _CaptureCounter = 0; // 파일명을 위한
   public void TakeSnapshot()
   {
+    //모든 UI 날리기
+    canvasAll.SetActive(false);
+    
+    // StartCoroutine("TakeSnapshotDetail");
+
+    //흰색배경이 같이 넘어감
+    // reserveImage = ScreenCapture.CaptureScreenshotAsTexture();
+    // fullScreen.texture = reserveImage; 
+
+    // 전체화면(UI까지 다나옴)
+    reserveImage= new Texture2D((int) fullScreen.rectTransform.rect.width, (int) fullScreen.rectTransform.rect.height);
+    reserveImage.ReadPixels(new Rect(0, 0,(int) fullScreen.rectTransform.rect.width, (int) fullScreen.rectTransform.rect.height), 0, 0);
+    reserveImage.Apply();
+    // ++_CaptureCounter;
+    fullScreen.texture = reserveImage; //사진찍는 법(찍고 나서 아래 UI를 바꾸면 됨)
+
+    fullScreen.gameObject.SetActive(true);
     backgroundScrollView.SetActive(false);
     backgroundScrollMenu.SetActive(false);
     takeButton.SetActive(false);
     backButton.SetActive(true);
     shareButton.SetActive(true);
     saveButton.SetActive(true);
-
-    // camera.enabled = false;
-    //문제점: set active 코드도 멈춤
-    //해결1: 위 작업이 다 끝나고 진행하게
-
-      Texture2D snap = new Texture2D((int) cameraSize.rectTransform.rect.width, (int) cameraSize.rectTransform.rect.height);
-    //   snap.SetPixels(camera.);
-      snap.ReadPixels(new Rect(0, 718,(int) cameraSize.rectTransform.rect.width, (int) cameraSize.rectTransform.rect.height), 0, 0);
-    
-      snap.Apply();
-      ++_CaptureCounter;
-      cameraSize.texture = snap; //사진찍는 법(찍고 나서 아래 UI를 바꾸면 됨)
+    canvasAll.SetActive(true);
   }
 
-  public void returnSearchFilter()
+  IEnumerator TakeSnapshotDetail()
   {
+    yield return new WaitForEndOfFrame();
+    //흰색배경이 같이 넘어감
+    // reserveImage = ScreenCapture.CaptureScreenshotAsTexture();
+    // fullScreen.texture = reserveImage; 
+
+    // 전체화면(UI까지 다나옴)
+    reserveImage= new Texture2D((int) fullScreen.rectTransform.rect.width, (int) fullScreen.rectTransform.rect.height);
+    reserveImage.ReadPixels(new Rect(0, 0,(int) fullScreen.rectTransform.rect.width, (int) fullScreen.rectTransform.rect.height), 0, 0);
+    reserveImage.Apply();
+    // ++_CaptureCounter;
+    fullScreen.texture = reserveImage; //사진찍는 법(찍고 나서 아래 UI를 바꾸면 됨)
+  }
+
+  public void returnToCamera()
+  {
+    fullScreen.gameObject.SetActive(false);
     backButton.SetActive(false);
     shareButton.SetActive(false);
     saveButton.SetActive(false);
     backgroundScrollView.SetActive(true);
     backgroundScrollMenu.SetActive(true);
     takeButton.SetActive(true);
-    // CameraOff();
-    // CameraOn();
   }
+
+  public void saveImage()
+  {
+    //https://stackoverflow.com/questions/44756917/saving-screenshot-to-android-gallary-via-game/44757233
+    StartCoroutine(CaptureScreenshotCoroutine(Screen.width, Screen.height));
+
+    // 사진이 저장되었다면/실패했다면 그에 따른 안내 멘트
+
+
+    //돌아가기는 필요 없을 듯
+
+  }
+
+private IEnumerator CaptureScreenshotCoroutine(int width, int height)
+{
+    yield return new WaitForEndOfFrame();
+    // Texture2D tex = new Texture2D(width, height);
+    // tex.ReadPixels(new Rect(0, 0, width, height), 0, 0);
+    // tex.Apply();
+
+    yield return reserveImage;
+    string path = SaveImageToGallery(reserveImage, "Name", "Description");
+    Debug.Log("Picture has been saved at:\n" + path);
+}
+protected const string MEDIA_STORE_IMAGE_MEDIA = "android.provider.MediaStore$Images$Media";
+protected static AndroidJavaObject m_Activity;
+
+protected static string SaveImageToGallery(Texture2D a_Texture, string a_Title, string a_Description)
+{
+    using (AndroidJavaClass mediaClass = new AndroidJavaClass(MEDIA_STORE_IMAGE_MEDIA))
+    {
+        using (AndroidJavaObject contentResolver = Activity.Call<AndroidJavaObject>("getContentResolver"))
+        {
+            AndroidJavaObject image = Texture2DToAndroidBitmap(a_Texture);
+            return mediaClass.CallStatic<string>("insertImage", contentResolver, image, a_Title, a_Description);
+        }
+    }
+}
+
+protected static AndroidJavaObject Texture2DToAndroidBitmap(Texture2D a_Texture)
+{
+    byte[] encodedTexture = a_Texture.EncodeToPNG();
+    using (AndroidJavaClass bitmapFactory = new AndroidJavaClass("android.graphics.BitmapFactory"))
+    {
+        return bitmapFactory.CallStatic<AndroidJavaObject>("decodeByteArray", encodedTexture, 0, encodedTexture.Length);
+    }
+}
+
+protected static AndroidJavaObject Activity
+{
+    get
+    {
+        if (m_Activity == null)
+        {
+            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            m_Activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+        }
+        return m_Activity;
+    }
+}
 
 
   public void SharePicture(){
+    //모든 UI 날리기
+    canvasAll.SetActive(false);    
     StartCoroutine("SharePictureNow");
+    //모든 UI 살리기
+    canvasAll.SetActive(true);
   }
   IEnumerator SharePictureNow(){
-      yield return new WaitForEndOfFrame();
-      // 전체화면(UI까지 다나옴)
-    //   Texture2D tx = new Texture2D(camera.pixelWidth, camera.pixelHeight, TextureFormat.RGB24, false);
-    //   tx.ReadPixels(new Rect(0, 0, camera.pixelWidth, camera.pixelHeight), 0, 0);
+    yield return new WaitForEndOfFrame();
 
-    Texture2D tx = new Texture2D((int) (Screen.width * 1.0), (int) (Screen.height * 0.8), TextureFormat.RGB24, false);
-    Debug.Log("@@@@@@@@@@@@@@@@@@@");
-    Debug.Log((Screen.width * 1.0));
-    Debug.Log((Screen.height * 0.8));
-    Debug.Log((int)cameraSize.rectTransform.rect.width);
-    Debug.Log((int)cameraSize.rectTransform.rect.height);
-    Debug.Log("@@@@@@@@@@@@@@@@@@@");
-
-    tx.ReadPixels(new Rect(0, 0,(int) cameraSize.rectTransform.rect.width, (int) cameraSize.rectTransform.rect.height), 0, 0);
-      tx.Apply();
-      string txtdate = DateTime.Now.ToString("yyyyMMddHHmmss");
-      string path = Path.Combine(Application.temporaryCachePath, txtdate+".png");
-      File.WriteAllBytes(path, tx.EncodeToPNG());
-      Destroy(tx);
-      new NativeShare()
-          .AddFile(path)
-          .SetSubject("image share")
-          .SetText("image")
-          .Share();
+    reserveImage.Apply();
+    string txtdate = DateTime.Now.ToString("yyyyMMddHHmmss");
+    string path = Path.Combine(Application.temporaryCachePath, txtdate+".png");
+    File.WriteAllBytes(path, reserveImage.EncodeToPNG());
+    Destroy(reserveImage);
+    new NativeShare()
+        .AddFile(path)
+        .SetSubject("image share")
+        .SetText("image")
+        .Share();
   }
 }
+
