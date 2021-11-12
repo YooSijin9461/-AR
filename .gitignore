@@ -38,7 +38,7 @@
 /Unity/NexonTest/.consulo/
 /Unity/NexonTest/*.csproj
 /Unity/NexonTest/*.unityproj
-# /Unity/NexonTest/*.sln
+/Unity/NexonTest/*.sln
 /Unity/NexonTest/*.suo
 /Unity/NexonTest/*.tmp
 /Unity/NexonTest/*.user
@@ -60,7 +60,7 @@
 /Unity/NexonTest/sysinfo.txt
 
 # Builds
-# /Unity/NexonTest/*.apk
+/Unity/NexonTest/*.apk
 /Unity/NexonTest/*.aab
 /Unity/NexonTest/*.unitypackage
 
