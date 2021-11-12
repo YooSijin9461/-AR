@@ -19,7 +19,7 @@
 /Unity/NexonTest/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+/Unity/NexonTest/!/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -38,7 +38,7 @@
 /Unity/NexonTest/.consulo/
 /Unity/NexonTest/*.csproj
 /Unity/NexonTest/*.unityproj
-/Unity/NexonTest/*.sln
+# /Unity/NexonTest/*.sln
 /Unity/NexonTest/*.suo
 /Unity/NexonTest/*.tmp
 /Unity/NexonTest/*.user
@@ -60,7 +60,7 @@
 /Unity/NexonTest/sysinfo.txt
 
 # Builds
-/Unity/NexonTest/*.apk
+# /Unity/NexonTest/*.apk
 /Unity/NexonTest/*.aab
 /Unity/NexonTest/*.unitypackage
 
