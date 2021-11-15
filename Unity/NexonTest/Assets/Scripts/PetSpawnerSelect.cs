@@ -242,7 +242,7 @@ public class PetSpawnerSelect: MonoBehaviour
         // 버튼 눌렀을 때 할일
         selectObject = placeObjects[9];
         redPandaState = false;
-        penguinState = true;
+        penguinState = false;
         oxState = false;
         walrusState = false;
         catState = false;
