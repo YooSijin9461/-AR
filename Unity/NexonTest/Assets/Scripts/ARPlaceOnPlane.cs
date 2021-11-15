@@ -3,13 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ARPlaceOnPlane : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
     public GameObject placeObject;
+    public Button takeBtn;
+    public Button videoBtn;
 
     GameObject spawnObject;
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +52,17 @@ public class ARPlaceOnPlane : MonoBehaviour
                     spawnObject = Instantiate(placeObject, hitPose.position, hitPose.rotation);
                 }
                 // 물체가 있으면
-                else
+                else if (IsPointerOverUIObject() == false)
                 {
+                    Debug.Log("This is the way");
                     spawnObject.transform.position = hitPose.position;
                     spawnObject.transform.rotation = hitPose.rotation;
                 }
+                /*else
+                {
+                    spawnObject.transform.position = hitPose.position;
+                    spawnObject.transform.rotation = hitPose.rotation;
+                }*/
             }
 
         }

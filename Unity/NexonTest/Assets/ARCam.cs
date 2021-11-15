@@ -11,6 +11,7 @@ namespace NatSuite.Examples {
     using NatSuite.Recorders.Inputs;
     using NatSuite.Sharing;
     using UnityEngine.UI;
+    using UnityEngine.EventSystems;
     using System.IO;
 
     public sealed class ARCam : MonoBehaviour {
@@ -39,7 +40,8 @@ namespace NatSuite.Examples {
             var clock = new RealtimeClock();
             recorder = new MP4Recorder(videoWidth, videoHeight, 30);
             // On Android, create an optimized texture input for better performance
-            if (Application.platform == RuntimePlatform.Android) {
+            if (Application.platform == RuntimePlatform.Android)
+            {
                 var textureInput = new GLESTextureInput(recorder, multithreading: true);
                 cameraInput = new CameraInput(textureInput, clock, videoCamera);
             }

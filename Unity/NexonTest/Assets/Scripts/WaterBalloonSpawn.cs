@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
+using UnityEngine.EventSystems;
 
 public class WaterBalloonSpawn : MonoBehaviour
 {
@@ -11,6 +11,14 @@ public class WaterBalloonSpawn : MonoBehaviour
     public GameObject placeObject;
 
     GameObject spawnObject;
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +42,12 @@ public class WaterBalloonSpawn : MonoBehaviour
             if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
             {
                 Pose hitPose = hits[0].pose;
-                // 물체가 없으면
-                spawnObject = Instantiate(placeObject, hitPose.position, hitPose.rotation);
-                spawnObject.GetComponent<ParticleSystem>().Play();
+                if (IsPointerOverUIObject() == false)
+                {
+                    // 물체가 없으면
+                    spawnObject = Instantiate(placeObject, hitPose.position, hitPose.rotation);
+                    spawnObject.GetComponent<ParticleSystem>().Play();
+                }
             }
 
         }
