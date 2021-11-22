@@ -1,33 +1,6 @@
-기술스택
+# 넥잘AR
 
-- Unity
-- (AR Foundation, AR Core)
-  최민수
-
-넥잘AR 로고(O)
-최민수
-
-실제 시연 Gif (O)
-최민수
-
-소개 자료(PPT 바꿔서 PDF로)
-최민수
-
-Team (Git 주소)
-서권우
-
-라이센스: 알아봐야됨
-유시진
-
-프로젝트 한 줄 요약
-서권우
-
-개요
-유시진
-
-# 톡톡톡(Tok! Tok! Tok!)
-
-> **채팅 / 화면공유 / 화상통화 기능을 제공하는 화상 상담 플랫폼**
+> **넥슨 게임 IP를 활용한 AR필터를 제공하는 어플리케이션**
 
 <div align="center" style="text-align: center">
 <img src="https://img.shields.io/badge/java 1.8-007396?style=for-the-badge&logo=java&logoColor=white">
@@ -50,9 +23,7 @@ Team (Git 주소)
 
 ## 개요
 
-> 기존의 채팅봇 서비스에 WebRTC를 접목하여 고객의 문제를 실시간 화상채팅으로 좀 더 심도있게 들여다보고 해결해 줄 수 있는 솔루션을 구현하였습니다.
-
-- 유튜브 데모 동영상 - https://youtu.be/856b8lwlSAg
+> 기존의 AR필터 어플리케이션에 넥슨 게임 IP를 접목하여 10대, 20대 여성들에게 귀엽고 재미있는 경험을 제공해 줄 수 있는 솔루션을 구현하였습니다.
 
 ## Preview
 
@@ -83,7 +54,7 @@ Team (Git 주소)
 |-- 소개자료.pdf
 ```
 
-## Porting Manual(with dump data)
+## Porting Manual
 
 포팅을 위한 메뉴얼과 initialize를 위한 데이터
 
@@ -98,12 +69,10 @@ Team (Git 주소)
 
 | 이름   | github                                          | 역할     | 비고   |
 | ------ | ----------------------------------------------- | -------- | ------ |
-| 한주연 | [taxol1203](https://github.com/taxol1203)       | Backend  | Leader |
-| 문일민 | [smileostrich](https://github.com/smileostrich) | Backend  | -      |
-| 김대연 | [daebalprime](https://github.com/daebalprime)   | Backend  | -      |
-| 김도형 | [teemollt](https://github.com/teemollt)         | Frontend | -      |
-| 김소빈 | [starempty](https://github.com/starempty)       | Frontend | -      |
-| 최민수 | [neverte](https://github.com/neverte)           | Frontend | -      |
+| 서권우 | [sz5656](https://github.com/sz5656)       | Unity  | Leader |
+| 유시진 | [YooSijin9461](https://github.com/YooSijin9461) | Unity  | Filter |
+| 최민수 | [neverte](https://github.com/neverte)   | Unity  | UI     |
+
 
 ## Licences
 
