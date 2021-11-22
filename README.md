@@ -1,6 +1,6 @@
-# 톡톡톡(Tok! Tok! Tok!)
+# 넥잘AR
 
-> **채팅 / 화면공유 / 화상통화 기능을 제공하는 화상 상담 플랫폼**
+> **넥슨 게임 IP를 활용한 AR필터를 제공하는 어플리케이션**
 
 <div align="center" style="text-align: center">
 
@@ -16,9 +16,7 @@
 
 ## 개요
 
-> 기존의 채팅봇 서비스에 WebRTC를 접목하여 고객의 문제를 실시간 화상채팅으로 좀 더 심도있게 들여다보고 해결해 줄 수 있는 솔루션을 구현하였습니다.
-
-- 유튜브 데모 동영상 - https://youtu.be/856b8lwlSAg
+> 기존의 AR필터 어플리케이션에 넥슨 게임 IP를 접목하여 10대, 20대 여성들에게 귀엽고 재미있는 경험을 제공해 줄 수 있는 솔루션을 구현하였습니다.
 
 ## Preview
 
@@ -53,7 +51,7 @@
 |  |-- 소개자료.pdf
 ```
 
-## Porting Manual(with dump data)
+## Porting Manual
 
 포팅을 위한 메뉴얼과 initialize를 위한 데이터
 
@@ -68,24 +66,53 @@
 
 | 이름   | github                                          | 역할     | 비고   |
 | ------ | ----------------------------------------------- | -------- | ------ |
-| 한주연 | [taxol1203](https://github.com/taxol1203)       | Backend  | Leader |
-| 문일민 | [smileostrich](https://github.com/smileostrich) | Backend  | -      |
-| 김대연 | [daebalprime](https://github.com/daebalprime)   | Backend  | -      |
-| 김도형 | [teemollt](https://github.com/teemollt)         | Frontend | -      |
-| 김소빈 | [starempty](https://github.com/starempty)       | Frontend | -      |
-| 최민수 | [neverte](https://github.com/neverte)           | Frontend | -      |
+| 서권우 | [sz5656](https://github.com/sz5656)       | Unity  | Leader |
+| 유시진 | [YooSijin9461](https://github.com/YooSijin9461) | Unity  | Filter |
+| 최민수 | [neverte](https://github.com/neverte)   | Unity  | UI     |
+
 
 ## Licences
 
+#### AR Foundation
+
 ```Licences
-WebRTC Devices Selection Code
-BSD 3
-Copyright (c) 2014, The WebRTC project authors.
+AR Foundation © 2018 Unity Technologies
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-- Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-- Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-- Neither the name of Google nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+Licensed under the Unity Companion License for Unity-dependent projects (see Unity Companion License).
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Unless expressly provided otherwise, the Software under this license is made available strictly on an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.
 ```
+
+
+
+#### AR Core
+
+https://github.com/google-ar/arcore-android-sdk/blob/master/LICENSE
+
+
+
+#### NatCorder
+
+``````Licences
+MIT License
+
+Copyright (c) 2018 Eric Vander Wal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+``````
