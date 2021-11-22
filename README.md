@@ -5,8 +5,8 @@
 <div align="center" style="text-align: center">
 
 <img src="https://img.shields.io/badge/Unity 2020.3.21f1-000000?style=for-the-badge&logo=Unity&logoColor=white">
-<img src="https://img.shields.io/badge/Unity AR Foundation-2C2D72?style=for-the-badge&logo=Unity&logoColor=white">
-<img src="https://img.shields.io/badge/Unity AR Core-000000?style=for-the-badge&logo=Unity&logoColor=white">
+<img src="https://img.shields.io/badge/Unity AR Foundation 4.1.7-C70D2C?style=for-the-badge&logo=Unity&logoColor=white">
+<img src="https://img.shields.io/badge/Unity AR Core 4.1.7-FF5A5F?style=for-the-badge&logo=Unity&logoColor=white">
 <img src="https://img.shields.io/badge/CSharp-239128?style=for-the-badge&logo=CSharp&logoColor=white">
 </div>
 
@@ -31,14 +31,10 @@
 
 ```
 .\
-|-- spring\
-|-- django\
 |-- porting_manual\
-|  |-- dmp_pdata.sql
 |  |-- 포팅_메뉴얼.pdf
-|-- jenkins\
-|-- postgres\
-|-- vue\
+|-- ReadmeSrc\
+|-- Unity\
 ```
 
 ## 소개 자료
@@ -53,23 +49,21 @@
 
 ## Porting Manual
 
-포팅을 위한 메뉴얼과 initialize를 위한 데이터
+포팅을 위한 메뉴얼
 
 ```
 .\
 |-- porting_manual\
-|  |-- dmp_pdata.sql
 |  |-- 포팅_메뉴얼.pdf
 ```
 
 ## Team
 
-| 이름   | github                                          | 역할     | 비고   |
-| ------ | ----------------------------------------------- | -------- | ------ |
-| 서권우 | [sz5656](https://github.com/sz5656)       | Unity  | Leader |
-| 유시진 | [YooSijin9461](https://github.com/YooSijin9461) | Unity  | Filter |
-| 최민수 | [neverte](https://github.com/neverte)   | Unity  | UI     |
-
+| 이름   | github                                          | 역할  | 비고   |
+| ------ | ----------------------------------------------- | ----- | ------ |
+| 서권우 | [sz5656](https://github.com/sz5656)             | Unity | Leader |
+| 유시진 | [YooSijin9461](https://github.com/YooSijin9461) | Unity | -      |
+| 최민수 | [neverte](https://github.com/neverte)           | Unity | -      |
 
 ## Licences
 
@@ -83,17 +77,13 @@ Licensed under the Unity Companion License for Unity-dependent projects (see Uni
 Unless expressly provided otherwise, the Software under this license is made available strictly on an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.
 ```
 
-
-
 #### AR Core
 
 https://github.com/google-ar/arcore-android-sdk/blob/master/LICENSE
 
-
-
 #### NatCorder
 
-``````Licences
+```Licences
 MIT License
 
 Copyright (c) 2018 Eric Vander Wal
@@ -115,4 +105,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-``````
+```
