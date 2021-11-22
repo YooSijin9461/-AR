@@ -1,51 +1,17 @@
-기술스택
-
-- Unity
-- (AR Foundation, AR Core)
-  최민수
-
-넥잘AR 로고(O)
-최민수
-
-실제 시연 Gif (O)
-최민수
-
-소개 자료(PPT 바꿔서 PDF로)
-최민수
-
-Team (Git 주소)
-서권우
-
-라이센스: 알아봐야됨
-유시진
-
-프로젝트 한 줄 요약
-서권우
-
-개요
-유시진
-
 # 톡톡톡(Tok! Tok! Tok!)
 
 > **채팅 / 화면공유 / 화상통화 기능을 제공하는 화상 상담 플랫폼**
 
 <div align="center" style="text-align: center">
-<img src="https://img.shields.io/badge/java 1.8-007396?style=for-the-badge&logo=java&logoColor=white">
-<img src="https://img.shields.io/badge/SpringBoot 2.5.2-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">
-<img src="https://img.shields.io/badge/maven 4.0.0-C71A36?style=for-the-badge&logo=Apache Maven&logoColor=white">
-<img src="https://img.shields.io/badge/Docker & DockerCompose 20.10.7 + 3 13.3-2496ED?style=for-the-badge&logo=Docker&logoColor=white">
-<img src="https://img.shields.io/badge/Jenkins LTS_JDK11-D24939?style=for-the-badge&logo=Jenkins&logoColor=white">
-<img src="https://img.shields.io/badge/Nginx 14.17.3-009639?style=for-the-badge&logo=nginx&logoColor=white">
-<img src="https://img.shields.io/badge/COTURN 4.5.1.1-000000?style=for-the-badge&logoColor=white">
-<img src="https://img.shields.io/badge/Vue.js 3-4FC08D?style=for-the-badge&logo=Vue.js&logoColor=white">
-<img src="https://img.shields.io/badge/IntelliJ IDEA 2021.01-000000?style=for-the-badge&logo=IntelliJ IDEA&logoColor=white">
-<img src="https://img.shields.io/badge/Spring Tool Suite 3.9.14-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
-<img src="https://img.shields.io/badge/Visual Studio Code 1.59.0-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white">
-<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white">
+
+<img src="https://img.shields.io/badge/Unity 2020.3.21f1-000000?style=for-the-badge&logo=Unity&logoColor=white">
+<img src="https://img.shields.io/badge/Unity AR Foundation-2C2D72?style=for-the-badge&logo=Unity&logoColor=white">
+<img src="https://img.shields.io/badge/Unity AR Core-000000?style=for-the-badge&logo=Unity&logoColor=white">
+<img src="https://img.shields.io/badge/CSharp-239128?style=for-the-badge&logo=CSharp&logoColor=white">
 </div>
 
 <div align="center" style="text-align: center">
-<img align="center" src="main_image.jpg" width="70%" style="text-align: center"/>
+<img align="center" src="ReadmeSrc/Logo/LogoBg.png" width="70%" style="text-align: center"/>
 </div>
 
 ## 개요
@@ -57,7 +23,10 @@ Team (Git 주소)
 ## Preview
 
 <div align="center" style="text-align: center">
-<img align="center" src="main_image2.gif" width="70%" style="text-align: center"/>
+<img align="center" src="ReadmeSrc/Gif/Aing.gif" width="20%" style="text-align: center"/>
+<img align="center" src="ReadmeSrc/Gif/Animal.gif" width="20%" style="text-align: center"/>
+<img align="center" src="ReadmeSrc/Gif/Pinkbean.gif" width="20%" style="text-align: center"/>
+<img align="center" src="ReadmeSrc/Gif/Sunglass.gif" width="20%" style="text-align: center"/>
 </div>
 
 ## Folder
@@ -80,7 +49,8 @@ Team (Git 주소)
 
 ```
 .\
-|-- 소개자료.pdf
+|-- ReadmeSrc\
+|  |-- 소개자료.pdf
 ```
 
 ## Porting Manual(with dump data)
